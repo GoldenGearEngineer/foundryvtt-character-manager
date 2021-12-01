@@ -1,0 +1,25 @@
+<form>
+    <nav class="tabs" data-group="primary-tabs">
+        <a class="item" data-tab="features" data-group="primary-tabs">Features</a>
+        <a class="item" data-tab="spells" data-group="primary-tabs">Spells</a>
+        <a class="item" data-tab="subclasses" data-group="primary-tabs">Subclasses</a>
+    </nav>
+    <section class="content">
+        <div class="tab" data-group="primary-tabs" data-tab="features">
+            <h1 class="flex0">Features</h1>
+            <ul>
+                {{#each features}}
+                    <li>Level: {{level}} - {{name}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="tab" data-group="primary-tabs" data-tab="spells">
+            <h1 class="flex0">Spells</h1>
+        </div>
+
+        <div class="tab" data-group="primary-tabs" data-tab="subclasses">
+            <h1 class="flex0">Subclasses</h1>
+        </div>
+    </section>
+</form>

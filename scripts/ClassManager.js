@@ -5,12 +5,9 @@ import { CharacterManager } from './CharacterManager.js';
  */
 export class ClassManager {
 
-
-
     static async GetClassCompendium() {
-        const compendiumName = 'class-manager-classes';
-
-        let compendium = game.packs.get(`world.${compendiumName}`);
+        
+        let compendium = game.packs.get(`world.${CharacterManager.COMPNDIUMNAME}`);
 
         if (compendium === undefined) {
             CharacterManager.log(true, "Class Compendium not found. Creating compendum...")
@@ -45,13 +42,22 @@ export class ClassManager {
     }
 
 
-    static async GetClassFeatures(className) {
+    static async GetClassFeaturesFromName(className) {
         let classToRead = await this.GetClass(className);
 
         let features = await classToRead.getFlag(CharacterManager.MODULE_ID, CharacterManager.FLAGS.CLASS);
 
         return features;
     }
+
+
+    static async GetClassFeatures(classToRead) {
+        let features = await classToRead.getFlag(CharacterManager.MODULE_ID, CharacterManager.FLAGS.CLASS);
+
+        return features;
+    }
+
+    
 
 
     static async UpdateClassFeatures(className, features) {

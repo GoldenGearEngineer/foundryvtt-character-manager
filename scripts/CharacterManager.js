@@ -4,7 +4,8 @@
 export class CharacterManager {
     static MODULE_ID = 'character-manager';
     static MODULE_NAME = 'Character Manager';
-    static DEBUG = game.modules.get('_dev-mode')?.api?.getPackageDebugValue(this.MODULE_ID);
+    static COMPNDIUMNAME = 'class-manager-classes';
+    static DEBUG = () => game.modules.get('_dev-mode')?.api?.getPackageDebugValue(this.MODULE_ID);
 
 
     static FLAGS = {
@@ -13,7 +14,7 @@ export class CharacterManager {
     }
 
     static TEMPLATES = {
-        settings: `modules/${this.MODULE_ID}/templates/settings.hbs`,
+        CLASSSETTINGS: `modules/${this.MODULE_ID}/templates/ClassSettingsForm.hbs`,
     };
 
 

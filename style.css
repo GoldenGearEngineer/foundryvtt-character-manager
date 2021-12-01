@@ -1,0 +1,17 @@
+.character-manager-add-button {
+    background: transparent;
+    padding: 0;
+    line-height: normal;
+    border: 0;
+    align-self: center;
+  }
+  
+  .character-manager-add-button > i {
+    margin-right: 0;
+    font-size: 2em;
+  }
+  
+  .character-manager-add-button:hover, .character-manager-add-button:focus {
+    box-shadow: none;
+    text-shadow: 0 0 5px red;
+  }
